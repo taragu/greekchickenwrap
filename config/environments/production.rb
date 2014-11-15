@@ -32,6 +32,9 @@ Rails.application.configure do
   # Generate digests for assets URLs.
   config.assets.digest = true
 
+  #set up the default URL options for the Devise mailer in each environment
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.
