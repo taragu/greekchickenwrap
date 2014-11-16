@@ -1,3 +1,56 @@
-<h3>User</h3>
-<p>Name: <%= @user.name if @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+<h3>My Skills</h3>
+
+<ul>
+<% @user.attributes.each_pair do |name, value| %>
+  <% if (value==1) %>
+  <% if (name!="sign_in_count") %>
+  <li>
+    <% if (name == "administering_medications") %>
+    <%= "Experience in administering necessary medicines" %>
+    <% elsif (name == "observing_patients_over_time") %>
+    <%= "Responsible for observing patients for changes in conditions over time" %>
+    <% elsif (name == "changing_dressings") %>
+    <%= "Knowledge of changing medical dressing" %>
+    <% elsif (name == "taking_and_recording_vitals") %>
+    <%= "Responsible for taking and recording vitals" %>
+    <% elsif (name == "bathing_patients_and_taking_care_of_basic_hygiene") %>
+    <%= "Bathing patients and taking care of basic hygienic needs" %>
+    <% elsif (name == "running_errands_with_a_client") %>
+    <%= "Fulfills any errands as needed by clients" %>
+    <% elsif (name == "having_compassion") %>
+    <%= "Having compassion" %>
+    <% elsif (name == "following_directions_precisely") %>
+    <%= "Objective thinker with the ability follow directions precisely" %>
+    <% elsif (name == "managing_emergency_situations") %>
+    <%= "Able to deal with difficult and emergency situations" %>
+    <% elsif (name == "communicating_effectively") %>
+    <%= "Effectively communicates with clients and other workers" %>
+    <% elsif (name == "filing_series_of_paperwork") %>
+    <%= "Experience handling various paperworks" %>
+    <% elsif (name == "using_a_pallet_jack_penumatic_ladder_or_a_fork_lift") %>
+    <%= "Experience with warehouse implements and tools" %>
+    <% elsif (name == "properly_handling_hazardous_materials") %>
+    <%= "Experience in the handling of hazardous materials" %>
+    <% elsif (name == "warehouse_safety_precautions") %>
+    <%= "Practiced standard Warehouse Safety Precautions" %>
+    <% elsif (name == "organizing_merchandise") %>
+    <%= "Experience with organizing merchandise" %>
+    <% elsif (name == "working_with_a_goods_retrieval_system") %>
+    <%= "Familiarity with typical goods retrieval systems" %>
+    <% elsif (name == "interacting_with_customers") %>
+    <%= "Experience with interacting with customers" %>
+    <% elsif (name == "standing_for_extended_periods_of_time") %>
+    <%= "Worked in positions requiring long periods of standing upright" %>
+    <% elsif (name == "performing_physically_dexterous_or_demanding_tasks") %>
+    <%= "Exceptional physical condition capable of performing more demanding tasks" %>
+    <% elsif (name == "basic_computer_proficiency") %>
+    <%= "Proficiency with basic computer skills" %>
+
+    
+    <% end %> 
+  </li>
+  <% end %>
+  <% end %>
+<% end %>
+</ul>
+
