@@ -1,4 +1,6 @@
+<!DOCTYPE html>
 <html>
+
 	<head></head>
 
 
@@ -7,20 +9,20 @@
 		<p>djaslkdjaslkdasjldks</p>
 
 		<div id="forkQuestiondiv">
-			<p>Which of hte following jobs do you wish to have?</p>
-			<button class="btn btn-default">Proceed</button>
+			<p>Which of the following jobs do you wish to have?</p>
+			<button onclick="revealNextPage('CNA')" class="btn btn-default">Proceed</button>
 		</div>
 
-		<div id="CNAPage1div">
+		<div style="display:none" id="CNAPage1div">
 			<p>Do you have previous work experience with this job or similar?</p>
-			<button class="btn btn-default">Proceed</button>
+			<button onclick="revealNextPage('CNA2')" class="btn btn-default">Proceed</button>
 
-			<div id="CNAPage2div">
+			<div style="display:none" id="CNAPage2div">
 				<p>In your previous work experience, have you had any work experience with any of the following?</p>
-				<button class="btn btn-default">Proceed</button>
+				<button onclick="revealNextPage('CNA3')" class="btn btn-default">Proceed</button>
 			</div>
 
-			<div id = "CNAPage3div">
+			<div style="display:none" id= "CNAPage3div">
 				<p>Do you have any job or volunteer experience with any of the following?</p>
 				<button class="btn btn-default">Proceed</button>
 			</div>
@@ -28,23 +30,35 @@
 
 
 
-		<div id="WarehousePage1div">
+		<div style="display:none" id="WarehousePage1div">
 			<p>Do you have previous experience in this job or something similar?</p>
 			<button class="btn btn-default">Proceed</button>
 
-			<div id="WarehousePage2div">
+			<div style="display:none" id="WarehousePage2div">
 				<p>In your previous experience, have you had experience with any of the following?</p>
 				<button class="btn btn-default">Proceed</button>
 			</div>
 
-			<div id="WarehousePage3div">
+			<div style="display:none" id="WarehousePage3div">
 				<p>In any previous work or volunteer experience have you had any experience with the following?</p>
 				<button class="btn btn-default">Proceed</button>
 			</div>
-			
+
 		</div>
 
 
 	</body>
+<script type="text/javascript">
+function revealNextPage(pageToReveal) {
+	if (pageToReveal==="CNA") {
+		$("#CNAPage1div").show("slow");
+		// document.getElementById("CNAPage1div").style.display = "table";
+	}
+	if (pageToReveal==="CNA3") {
+		$("#CNAPage3div").show("slow");
+	}
+}
+</script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 </html>
