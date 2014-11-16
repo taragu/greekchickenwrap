@@ -1,0 +1,5 @@
+class AddChangingDressingsToUsers < ActiveRecord::Migration
+  def change
+    add_column :users, :changing_dressings, :integer
+  end
+end
