@@ -34,6 +34,8 @@
 
         <ul class="nav navbar-nav navbar-right">
 	  <% if user_signed_in? %>
+	  <li><%= link_to 'Explore my skills', explore_my_skills_path(:id=>current_user.id) %></li>
+	  <li><%= link_to 'See my skills', user_path(:id=>current_user.id) %></li>
 	  <li><%= link_to 'Edit account', edit_user_registration_path %></li>
 	  <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
 	  <% else %>

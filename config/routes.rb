@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users
 
   get '/users/:id/edit2' => "users#edit2"
-  post "/users/:id/edit2"    => "users#edit2"
+  post "/users/:id/edit2"    => "users#edit2", as: "explore_my_skills"
 
   get '/home/questionPage', as: "questions_no_save"
 
