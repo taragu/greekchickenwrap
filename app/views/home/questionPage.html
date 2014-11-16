@@ -10,7 +10,7 @@
 
 		<div id="forkQuestiondiv">
 			<p>Which of the following jobs do you wish to have?</p>
-			<button onclick="revealNextPage('CNA')" class="btn btn-default">Proceed</button>
+			<button onclick="revealNextPage('WarehousePage1')" class="btn btn-default">Proceed</button>
 		</div>
 
 		<div style="display:none" id="CNAPage1div">
@@ -32,11 +32,11 @@
 
 		<div style="display:none" id="WarehousePage1div">
 			<p>Do you have previous experience in this job or something similar?</p>
-			<button class="btn btn-default">Proceed</button>
+			<button onclick="revealNextPage('WarehousePage2')" class="btn btn-default">Proceed</button>
 
 			<div style="display:none" id="WarehousePage2div">
 				<p>In your previous experience, have you had experience with any of the following?</p>
-				<button class="btn btn-default">Proceed</button>
+				<button onclick="revealNextPage('WarehousePage3')" class="btn btn-default">Proceed</button>
 			</div>
 
 			<div style="display:none" id="WarehousePage3div">
@@ -50,12 +50,14 @@
 	</body>
 <script type="text/javascript">
 function revealNextPage(pageToReveal) {
-	if (pageToReveal==="CNA") {
-		$("#CNAPage1div").show("slow");
+	if (pageToReveal != "") {
+		$("#" + pageToReveal + "div").show("slow");
 		// document.getElementById("CNAPage1div").style.display = "table";
 	}
-	if (pageToReveal==="CNA3") {
-		$("#CNAPage3div").show("slow");
+	else {
+		if ($("#CNAPage1div").css('display') != 'none') {
+			
+		}
 	}
 }
 </script>
