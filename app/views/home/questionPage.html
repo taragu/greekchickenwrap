@@ -11,36 +11,45 @@
 		<div id="forkQuestiondiv">
 			<h2>What job are you interested in?</h2>
 			<button onclick="revealNextPage('WarehousePage1')" class="btn btn-primary btn-lg btn-block">Warehouse Worker</button>
+			<br>
 			<button onclick="revealNextPage('CNAPage1')" class="btn btn-primary btn-lg btn-block">Certified Nursing Assistant</button>
+			<br>
 			<button class="btn btn-primary btn-lg btn-block">Truck Driver</button>
+			<br>
 			<button class="btn btn-primary btn-lg btn-block">Food Service Associate</button>
+			<br>
 			<button class="btn btn-primary btn-lg btn-block">Retail Worker</button>
 		</div>	
 
 		<div style="display:none" id="CNAPage1div">
-			<p>Do you have previous work experience in the CNA field or similar?</p>
-			<button onclick="revealNextPage('CNAPage2')" class="btn btn-default">Yes</button>
-			<button onclick="revealNextPage('CNAPage3')" class="btn btn-default">No</button>
+			<h3>Do you have previous work experience as a CNA (certified nursing assistant) or similar?</h3>
+			<br>
+			<button onclick="revealNextPage('CNAPage2')" class="btn btn-lg btn-block btn-default">Yes</button>
+			<button onclick="revealNextPage('CNAPage3')" class="btn btn-lg btn-block btn-default">No</button>
 		</div>
 		<div style="display:none" id="CNAPage2div">
-			<p>In your previous work, have you had experience with any of the following?</p>
-			<div class="checkbox">
+			<h3>In your previous work, have you had experience with any of the following?</h3>
+			<div style="font-size:20px" class="checkbox">
 				<label>
 			    	<input id="Administering Medications" type="checkbox" value="">
 			    	Administering Medications
 			  	</label>
+			  	<br>
 			  	<label>
 			    	<input id="Observing Patients Over Time" type="checkbox" value="dasdsa">
 			    	Observing Patients Over Time
 			  	</label>
+			  	<br>
 			  	<label>
 			    	<input id="Changing Dressings" type="checkbox" value="">
 			    	Changing Dressings
 			  	</label>
+			  	<br>
 			  	<label>
 			    	<input id="Taking and Recording Vitals" type="checkbox" value="">
 			    	Taking and Recording Vitals
 			  	</label>
+			  	<br>
 			  	<label>
 			    	<input id="Bathing Patients and Taking Care of Basic Hygiene" type="checkbox" value="">
 			    	Bathing Patients and Taking Care of Basic Hygiene
@@ -50,28 +59,33 @@
 		</div>
 
 		<div style="display:none" id= "CNAPage3div">
-			<p>Do you have any miscellaneous job or volunteer experience with any of the following?</p>
-			<div id="Running Errands with a Client" class="checkbox">
+			<h3>Do you have any miscellaneous job or volunteer experience with any of the following?</h3>
+			<div style="font-size:20px" id="Running Errands with a Client" class="checkbox">
 				<label>
 			    	<input type="checkbox" value="">
 			    	Running Errands with a Client
 				</label>
+				<br>
 				<label>
 			    	<input id="Practicing Compassion" type="checkbox" value="">
 			    	Practicing Compassion
 				</label>
+				<br>
 				<label>
 			    	<input id="Following Directions Precisely" type="checkbox" value="">
 			    	Following Directions Precisely
 				</label>
+				<br>
 				<label>
 			    	<input id="Managing Emergency Situations" type="checkbox" value="">
 			    	Managing Emergency Situations
 				</label>
+				<br>
 				<label>
 			    	<input id="Communicating Effectively" type="checkbox" value="">
 			    	Communicating Effectively
 				</label>
+				<br>
 				<label>
 			    	<input id="Filing Records and Other Paperwork" type="checkbox" value="">
 			    	Filing Records and Other Paperwork
@@ -82,22 +96,25 @@
 
 
 
-		<div style="display:none" id="WarehousePage1div">
-			<p>Do you have previous experience in Warehouse maintenence or something similar?</p>
-			<button onclick="revealNextPage('WarehousePage2')" class="btn btn-default">Yes</button>
-			<button onclick="revealNextPage('WarehousePage3')" class="btn btn-default">No</button>
+		<div align="center" style="display:none" id="WarehousePage1div">
+			<h3>Do you have previous experience in Warehouse maintenence or something similar?</h3>
+			<br>
+			<button onclick="revealNextPage('WarehousePage2')" class="btn btn-lg btn-block btn-default">Yes</button>
+			<button onclick="revealNextPage('WarehousePage3')" class="btn btn-lg btn-block  btn-default">No</button>
 		</div>
 		<div style="display:none" id="WarehousePage2div">
-			<p>In your previous work, have you had experience with any of the following?</p>
-			<div class="checkbox">
+			<h3>In your previous work, have you had experience with any of the following?</h3>
+			<div style="font-size:20px" class="checkbox">
 				<label>
 			    	<input id="Using a Pallet Jack, Pneumatic Ladder, or Fork Lift" type="checkbox" value="">
 			    	Using a Pallet Jack, Pneumatic Ladder, or Fork Lift
 				</label>
+				<br>
 				<label>
 			    	<input id="Properly Handliing Hazardous Materials" type="checkbox" value="">
 			    	Properly Handliing Hazardous Materials
 				</label>
+				<br>
 				<label>
 			    	<input id="Observing Warehouse Safety Precautions" type="checkbox" value="">
 			    	Observing Warehouse Safety Precautions
@@ -107,28 +124,33 @@
 		</div>
 
 		<div style="display:none" id="WarehousePage3div">
-			<p>In any previous work or volunteer experience have you had any experience with the following?</p>
-			<div class="checkbox">
+			<h3>In any previous work or volunteer experience have you had any experience with the following?</h3>
+			<div style="font-size:20px" class="checkbox">
 				<label>
 			    	<input id="Organizing Merchandise" type="checkbox" value="">
 			    	Organizing Merchandise
 				</label>
+				<br>
 				<label>
 			    	<input id="Working With a Goods Retrieval System" type="checkbox" value="">
 			    	Working With a Goods Retrieval System
 				</label>
+				<br>
 				<label>
 			    	<input id="Interacting With Customers" type="checkbox" value="">
 			    	Interacting With Customers
 				</label>
+				<br>
 				<label>
 			    	<input id="Standing for Extended Periods of Time" type="checkbox" value="">
 			    	Standing for Extended Periods of Time
 				</label>
+				<br>
 				<label>
 			    	<input id="Performing Physically dexterous or Demanding Tasks" type="checkbox" value="">
 			    	Performing Physically dexterous or Demanding Tasks
 				</label>
+				<br>
 				<label>
 			    	<input id="Basic Computer Proficiency" type="checkbox" value="">
 			    	Basic Computer Proficiency
