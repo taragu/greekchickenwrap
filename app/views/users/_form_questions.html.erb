@@ -10,43 +10,47 @@
     <div id="forkQuestiondiv">
       <h2>What job are you interested in?</h2>
       <button type="button" onclick="revealNextPage('WarehousePage1')" class="btn btn-primary btn-lg btn-block">Warehouse Worker</button>
-      <button type="button" onclick="revealNextPage('CNAPage1')" class="btn btn-primary btn-lg btn-block">Certified Nursing Assistant</button>
+      <br>
+      <button type="button" onclick="revealNextPage('CNAPage1')" class="btn btn-primary btn-lg btn-block">Certified Nursing Assistant (CNA)</button>
+      <br>
       <button type="button" class="btn btn-primary btn-lg btn-block">Truck Driver</button>
+      <br>
       <button type="button" class="btn btn-primary btn-lg btn-block">Food Service Associate</button>
+      <br>
       <button type="button" class="btn btn-primary btn-lg btn-block">Retail Worker</button>
     </div>	
     
-    <div style="display:none" id="CNAPage1div">
-      <p>Do you have previous work experience with this job or similar?</p>
-      <button type="button" onclick="revealNextPage('CNAPage2')" class="btn btn-default">Yes</button>
-      <button type="button" onclick="revealNextPage('CNAPage3')" class="btn btn-default">No</button>
+    <div align="center"  style="display:none" id="CNAPage1div">
+      <h3>Do you have previous work experience as a CNA or similar?</h3>
+      <button type="button" onclick="revealNextPage('CNAPage2')" class="btn btn-lg btn-block btn-default">Yes</button>
+      <button type="button" onclick="revealNextPage('CNAPage3')" class="btn btn-lg btn-block btn-default">No</button>
     </div>
 
 
 
     <div style="display:none" id="CNAPage2div">
-      <p>In your previous work, have you had experience with any of the following?</p>
-      <div class="checkbox">
+      <h3>In your previous work, have you had experience with any of the following?</h3>
+      <div style="font-size:20px" class="checkbox">
 	<label>
 	  <%= f.check_box :administering_medications, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Administering Medications
 	</label>
-
+	<br>
 	<label>
 	  <%= f.check_box :observing_patients_over_time, {}, 1, 0 %>
 	  Observing patients over time
 	</label>
-
+	<br>
 	<label>
 	  <%= f.check_box :changing_dressings, {}, 1, 0 %>
 	  Changing dressings
 	</label>
-
+	<br>
 	<label>
 	  <%= f.check_box :taking_and_recording_vitals, {}, 1, 0 %>
 	  Taking and recording vitals
 	</label>
-
+	<br>
 	<label>
 	  <%= f.check_box :bathing_patients_and_taking_care_of_basic_hygiene, {}, 1, 0 %>
 	  Bathing patients and taking care of basiz hygiene
@@ -60,29 +64,34 @@
 
     <!-- TODO WE WANT TO DO CHECK BOXES FOR DIV 3 4 6 7 -->
     <div style="display:none" id= "CNAPage3div">
-      <p>Do you have any miscellaneous job or volunteer experience with any of the following?</p>
-      <div class="checkbox">
+      <h3>Do you have any miscellaneous job or volunteer experience with any of the following?</h3>
+      <div class="checkbox" style="font-size:20px" >
 	<label>
 	  <%= f.check_box :running_errands_with_a_client, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Running errands with a client
 	</label>
-	
+	<br>
 	<label>
 	  <%= f.check_box :having_compassion, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Having compassion
 	</label>
+	<br>
 	<label>
 	  <%= f.check_box :following_directions_precisely, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Following directions precisely
 	</label>
+	<br>
 	<label>
 	  <%= f.check_box :managing_emergency_situations, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Managing emergency situations
 	</label>
+
+	<br>
 	<label>
 	  <%= f.check_box :communicating_effectively, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Communicating effectively
 	</label>
+	<br>
 	<label>
 	  <%= f.check_box :filing_series_of_paperwork, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Filing series of paperwork
@@ -98,24 +107,26 @@
 
 
 
-    <div style="display:none" id="WarehousePage1div">
-      <p>Do you have previous experience in Warehouse maintenence or something similar?</p>
-      <button type="button" onclick="revealNextPage('WarehousePage2')" class="btn btn-default">Yes</button>
-      <button type="button" onclick="revealNextPage('WarehousePage3')" class="btn btn-default">No</button>
+    <div align="center" style="display:none" id="WarehousePage1div">
+      <h3>Do you have previous experience in Warehouse maintenence or something similar?</h3>
+      <button type="button" onclick="revealNextPage('WarehousePage2')" class="btn btn-block btn-lg btn-default">Yes</button>
+      <button type="button" onclick="revealNextPage('WarehousePage3')" class="btn btn-block btn-lg btn-default">No</button>
     </div>
 
 
     <div style="display:none" id="WarehousePage2div">
-      <p>In your previous work, have you had experience with any of the following?</p>
-      <div class="checkbox">
+      <h3>In your previous work, have you had experience with any of the following?</h3>
+      <div class="checkbox" style="font-size:20px" >
 	<label>
 	  <%= f.check_box :using_a_pallet_jack_penumatic_ladder_or_a_fork_lift, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Using a pallet jack, penumatic ladder, or a fork lift
 	</label>
+	<br>
 	<label>
 	  <%= f.check_box :properly_handling_hazardous_materials, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Properly handling hazardous materials
 	</label>
+	<br>
 	<label>
 	  <%= f.check_box :warehouse_safety_precautions, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Warehouse safety precautions
@@ -127,28 +138,33 @@
 
 
     <div style="display:none" id="WarehousePage3div">
-      <p>In any previous work or volunteer experience have you had any experience with the following?</p>
-      <div class="checkbox">
+      <h3>In any previous work or volunteer experience have you had any experience with the following?</h3>
+      <div class="checkbox" style="font-size:20px" >
 	<label>
 	  <%= f.check_box :organizing_merchandise, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Organizing merchandise
 	</label>
+	<br>
 	<label>
 	  <%= f.check_box :working_with_a_goods_retrieval_system, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Working with a goods retrieval system
 	</label>
+	<br>
 	<label>
 	  <%= f.check_box :interacting_with_customers, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Always interact with others with compassion
 	</label>
+	<br>
 	<label>
 	  <%= f.check_box :standing_for_extended_periods_of_time, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Standing for extended periods of time
 	</label>
+	<br>
 	<label>
 	  <%= f.check_box :performing_physically_dexterous_or_demanding_tasks, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Performing physically dexterous or demanding tasks
 	</label>
+	<br>
 	<label>
 	  <%= f.check_box :basic_computer_proficiency, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
 	  Basic computer proficiency
