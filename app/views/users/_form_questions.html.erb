@@ -1,8 +1,25 @@
 <%= form_for @user do |f| %>  
   <div class="form-group">  
+    <P>Administering Medications </p>
     <%= f.radio_button :administering_medications, "1"  %>
 
     <%= f.radio_button :administering_medications, "0"  %>
+
+    <p>observing_patients_over_time</p>
+    <%= f.radio_button :observing_patients_over_time, "1"  %>
+
+    <%= f.radio_button :observing_patients_over_time, "0"  %>
+
+    <p>changing_dressings</p>
+    <%= f.radio_button :changing_dressings, "1"  %>
+
+    <%= f.radio_button :changing_dressings, "0"  %>
+    
+    <p>taking_and_recording_vitals</p>
+    <%= f.radio_button :taking_and_recording_vitals, "1"  %>
+
+    <%= f.radio_button :taking_and_recording_vitals, "0"  %>
+
   </div>  
   <div class="form-group">
     <%= hidden_field_tag "id", current_user.id %>
