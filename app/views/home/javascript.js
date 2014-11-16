@@ -14,12 +14,12 @@
 // }
 
 function revealNextPage(pageToReveal) {
-	if (pageToReveal==="CNA") {
+	if (pageToReveal !="") {
 		// $("#CNAPage1div").show("slow");
 		document.getElementById("CNAPage1div").style.display = "table";
 	}
 	if (pageToReveal==="CNA3") {
-		
+
 	}
 }
 
