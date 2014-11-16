@@ -1,5 +1,51 @@
 <%= form_for @user do |f| %>  
-  <div class="form-group">  
+  <div class="form-group">
+
+
+    <div id="MainQuestionnairediv" class="container">
+
+    
+    <div id="forkQuestiondiv">
+      <p>Which of the following jobs do you wish to have?</p>
+      <button onclick="revealNextPage('WarehousePage1')" class="btn btn-primary btn-lg btn-block">Warehouse Worker</button>
+      <button onclick="revealNextPage('CNAPage1')" class="btn btn-default btn-lg btn-block">Certified Nursing Assistant</button>
+      <button class="btn btn-primary btn-lg btn-block">Truck Driver</button>
+      <button class="btn btn-primary btn-lg btn-block">Food Service Associate</button>
+      <button class="btn btn-primary btn-lg btn-block">Retail Worker</button>
+    </div>	
+    
+    <div style="display:none" id="CNAPage1div">
+      <p>Do you have previous work experience with this job or similar?</p>
+      <button onclick="revealNextPage('CNAPage2')" class="btn btn-default">Yes</button>
+      <button onclick="revealNextPage('CNAPage3')" class="btn btn-default">No</button>
+    </div>
+
+
+
+    <div style="display:none" id="CNAPage2div">
+      <p>In your previous work, have you had experience with any of the following?</p>
+      <button class="btn btn-default">Administering Medications</button>
+      <button class="btn btn-default">Observing Patients Over Time</button>
+      <button class="btn btn-default">Changing Dressing</button>
+      <button class="btn btn-default">Taking and Recording Vitals</button>
+      <button class="btn btn-default">No</button>
+      <button onclick="revealNextPage('CNAPage3')" class="btn btn-default">Proceed</button>
+    </div>
+
+
+
+    <!-- TODO WE WANT TO DO CHECK BOXES FOR DIV 3 4 6 7 -->
+    <div style="display:none" id= "CNAPage3div">
+      <p>Do you have any miscellaneous job or volunteer experience with any of the following?</p>
+      <button class="btn btn-default">No</button>
+      <button class="btn btn-default">No</button>
+      <button class="btn btn-default">No</button>
+      <button class="btn btn-default">No</button>
+      <button class="btn btn-default">No</button>
+      <button class="btn btn-default">No</button>
+      <button class="btn btn-default">Proceed</button>
+    </div>
+  
     <P>Administering Medications </p>
     <%= f.radio_button :administering_medications, "1"  %>
 
@@ -106,5 +152,7 @@
     <%= hidden_field_tag "id", current_user.id %>
     <%= f.submit "Submit" ,:class=>"btn btn-primary"%>
   </div>  
+
+</div>
 <% end %> 
 
