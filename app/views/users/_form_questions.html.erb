@@ -1,0 +1,11 @@
+<%= form_for @user do |f| %>  
+
+  <div class="form-group">  
+    <%= f.radio_button :administering_medications, "1"  %>  
+  </div>  
+
+  <div class="form-group">
+    <%= hidden_field_tag "id", current_user.id %>
+    <%= f.submit "Submit" ,:class=>"btn btn-primary"%>
+  </div>  
+<% end %> 
