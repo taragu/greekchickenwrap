@@ -87,7 +87,11 @@
 	</label>
 
       </div>
-      <button type="button" class="btn btn-default">Proceed</button>
+      <!--button type="button" class="btn btn-default">Proceed</button-->
+      <div class="form-group">
+	<%= hidden_field_tag "id", current_user.id %>
+	<%= f.submit "Submit" ,:class=>"btn btn-primary"%>
+      </div>  
     </div>
 
 
@@ -150,15 +154,19 @@
 
 
       </div>
-      <button type="button" class="btn btn-default">Proceed</button>
+      <!--button type="button" class="btn btn-default">Proceed</button-->
+      <div class="form-group">
+	<%= hidden_field_tag "id", current_user.id %>
+	<%= f.submit "Submit" ,:class=>"btn btn-primary"%>
+      </div>  
     </div>
 
 
   </div>  
-  <div class="form-group">
-    <%= hidden_field_tag "id", current_user.id %>
-    <%= f.submit "Submit" ,:class=>"btn btn-primary"%>
-  </div>  
+  <!--div class="form-group"-->
+    <!--= hidden_field_tag "id", current_user.id %-->
+    <!--= f.submit "Submit" ,:class=>"btn btn-primary"-->
+  <!--/div-->  
 
 </div>
 <% end %> 
