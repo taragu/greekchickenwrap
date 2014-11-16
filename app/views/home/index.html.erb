@@ -5,19 +5,21 @@
 </head>
 <body>
 <div class="jumbotron">
-  <h1 align="center">Achieve Skillightenment.</h1>
-  <p align="center">Welcome to your resume-building resource.</p>
+  <h1 align="center">Welcome to Ujuzi.</h1>
+  <p align="center">Achieve skill-ightenment.</p>
 </div>
 
-<p class="lead">Skillightenment is an easy to use resume building aid. Via a simple questionnaire, Skillightenment helps you discover your own potential and facilitates effective communication of your talents and abilities to potential employers.</p>
+<p class="lead">Ujuzi is an easy to use resume building aid. Via a simple questionnaire, Ujuzi helps you discover your own potential and facilitates effective communication of your talents and abilities to potential employers.</p>
 
-<p class= "lead">After the Skillightenment process, we'll output a neat summary of your skills, which you can use to bolster your resume strength and empower your job search.</p>
+<p class= "lead">After the Ujuzi process, we'll output a neat summary of your skills, which you can use to bolster your resume strength and empower your job search.</p>
 
-<div>
+<p class="lead">Register above to save your data for later reference, or click below to begin skill-ightenment.
+
+<div align="center">
 <% if !current_user.nil?%>
-<%= button_to "Questions!", {:controller => :users, :action => 'edit2', :id => current_user.id}, :class=>"btn btn-primary" %>
+<%= button_to "Questions!", {:controller => :users, :action => 'edit2', :id => current_user.id}, :class=>"btn btn-primary btn-lg btn-block" %>
 <% else %>
-<%= link_to 'questionPage', questions_no_save_path, class: 'btn btn-primary' %>
+<%= link_to 'Let\'s Go.', questions_no_save_path, class: 'btn btn-primary btn-lg btn-block' %>
 <% end %>
 </div>
 
