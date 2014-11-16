@@ -27,29 +27,58 @@
 			<p>In your previous work, have you had experience with any of the following?</p>
 			<div class="checkbox">
 				<label>
-			    	<input type="checkbox" value="">
+			    	<input id="Administering Medications" type="checkbox" value="">
 			    	Administering Medications
 			  	</label>
+			  	<label>
+			    	<input id="Observing Patients Over Time" type="checkbox" value="dasdsa">
+			    	Observing Patients Over Time
+			  	</label>
+			  	<label>
+			    	<input id="Changing Dressings" type="checkbox" value="">
+			    	Changing Dressings
+			  	</label>
+			  	<label>
+			    	<input id="Taking and Recording Vitals" type="checkbox" value="">
+			    	Taking and Recording Vitals
+			  	</label>
+			  	<label>
+			    	<input id="Bathing Patients and Taking Care of Basic Hygiene" type="checkbox" value="">
+			    	Bathing Patients and Taking Care of Basic Hygiene
+			  	</label>
 			</div>
-
-
-			<button class="btn btn-default">Administering Medications</button>
-			<button class="btn btn-default">Observing Patients Over Time</button>
-			<button class="btn btn-default">Changing Dressing</button>
-			<button class="btn btn-default">Taking and Recording Vitals</button>
-			<button class="btn btn-default">No</button>
 			<button onclick="revealNextPage('CNAPage3')" class="btn btn-default">Proceed</button>
 		</div>
 
 		<div style="display:none" id= "CNAPage3div">
 			<p>Do you have any miscellaneous job or volunteer experience with any of the following?</p>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">Proceed</button>
+			<div id="Running Errands with a Client" class="checkbox">
+				<label>
+			    	<input type="checkbox" value="">
+			    	Running Errands with a Client
+				</label>
+				<label>
+			    	<input id="Practicing Compassion" type="checkbox" value="">
+			    	Practicing Compassion
+				</label>
+				<label>
+			    	<input id="Following Directions Precisely" type="checkbox" value="">
+			    	Following Directions Precisely
+				</label>
+				<label>
+			    	<input id="Managing Emergency Situations" type="checkbox" value="">
+			    	Managing Emergency Situations
+				</label>
+				<label>
+			    	<input id="Communicating Effectively" type="checkbox" value="">
+			    	Communicating Effectively
+				</label>
+				<label>
+			    	<input id="Filing Records and Other Paperwork" type="checkbox" value="">
+			    	Filing Records and Other Paperwork
+				</label>
+			</div>
+			<button onclick="evaluateResponses()" class="btn btn-default">Proceed</button>
 		</div>
 
 
@@ -61,21 +90,52 @@
 		</div>
 		<div style="display:none" id="WarehousePage2div">
 			<p>In your previous work, have you had experience with any of the following?</p>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">No</button>
+			<div class="checkbox">
+				<label>
+			    	<input id="Using a Pallet Jack, Pneumatic Ladder, or Fork Lift" type="checkbox" value="">
+			    	Using a Pallet Jack, Pneumatic Ladder, or Fork Lift
+				</label>
+				<label>
+			    	<input id="Properly Handliing Hazardous Materials" type="checkbox" value="">
+			    	Properly Handliing Hazardous Materials
+				</label>
+				<label>
+			    	<input id="Observing Warehouse Safety Precautions" type="checkbox" value="">
+			    	Observing Warehouse Safety Precautions
+				</label>
+			</div>
 			<button onclick="revealNextPage('WarehousePage3')" class="btn btn-default">Proceed</button>
 		</div>
 
 		<div style="display:none" id="WarehousePage3div">
 			<p>In any previous work or volunteer experience have you had any experience with the following?</p>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">No</button>
-			<button class="btn btn-default">Proceed</button>
+			<div class="checkbox">
+				<label>
+			    	<input id="Organizing Merchandise" type="checkbox" value="">
+			    	Organizing Merchandise
+				</label>
+				<label>
+			    	<input id="Working With a Goods Retrieval System" type="checkbox" value="">
+			    	Working With a Goods Retrieval System
+				</label>
+				<label>
+			    	<input id="Interacting With Customers" type="checkbox" value="">
+			    	Interacting With Customers
+				</label>
+				<label>
+			    	<input id="Standing for Extended Periods of Time" type="checkbox" value="">
+			    	Standing for Extended Periods of Time
+				</label>
+				<label>
+			    	<input id="Performing Physically dexterous or Demanding Tasks" type="checkbox" value="">
+			    	Performing Physically dexterous or Demanding Tasks
+				</label>
+				<label>
+			    	<input id="Basic Computer Proficiency" type="checkbox" value="">
+			    	Basic Computer Proficiency
+				</label>
+			</div>
+			<button onclick="evaluateResponses()" class="btn btn-default">Proceed</button>
 		</div>
 
 
@@ -88,16 +148,33 @@ function revealNextPage(pageToReveal) {
 
 	for (i = 0; i < pages.length; i++) {
 		if (pages[i] != pageToReveal) {
-			console.log(pages[i] + " " + pageToReveal);
 			$("#" + pages[i] + "div").hide("slow");
 			// document.getElementById(pageToReveal + "div").style.display = "none";
 		}
 	}
 	$("#" + pageToReveal + "div").show("slow");
 	// document.getElementById("CNAPage1div").style.display = "table";
-
-
 }
+
+function evaluateResponses() {
+	pages = ["forkQuestion", "CNAPage1", "CNAPage2", "CNAPage3", "WarehousePage1", "WarehousePage2", "WarehousePage3"];
+	IDs = ["Administering Medications", "Observing Patients Over Time", "Changing Dressings", "Taking and Recording Vitals", "Bathing Patients and Taking Care of Basic Hygiene", "Running Errands with a Client", "Practicing Compassion", "Following Directions Precisely", "Managing Emergency Situations", "Communicating Effectively", "Filing Records and Other Paperwork", "Using a Pallet Jack, Pneumatic Ladder, or Fork Lift", "Properly Handliing Hazardous Materials", "Observing Warehouse Safety Precautions", "Organizing Merchandise", "Working With a Goods Retrieval System", "Interacting With Customers", "Standing for Extended Periods of Time", "Performing Physically dexterous or Demanding Tasks", "Basic Computer Proficiency"];
+	Skills = ["Experience in administering necessary medicines", "Responsible for observing patients for changes in conditions over time", "Knowledge of changing medical dressing", "Responsible for taking and recording vitals", "Bathing patients and taking care of basic hygienic needs", "Fulfills any errands as needed by clients", "Always interacts with others with compassion" "Objective thinker with the ability follow directions precisely", "Able to deal with difficult and emergency situations", "Effectively communicates with clients and other workers", "Experience handling various paperworks", "Experience with warehouse implements and tools", "Experience in the handling of hazardous materials", "Practiced standard Warehouse Safety Precautions", "Experience with organizing merchandise", "Familiarity with typical goods retrieval systems", "Experience with interacting with customers", "Worked in positions requiring long periods of standing upright", "Exceptional physical condition capable of performing more demanding tasks", "Proficiency with basic computer skills"];
+	for (i = 0; i < pages.length; i++) {
+		$("#" + pages[i] + "div").hide("slow");
+		// document.getElementById(pageToReveal + "div").style.display = "none";
+	}
+	console.log(IDs.length);
+	console.log(Skills.length);
+	finalSkillz = [];
+	for (i=0; i < IDs.length; i++) {
+		if (document.getElementById(IDs[i]).checked) {
+			finalSkillz.push(Skills[i]);
+		}
+		// console.log(document.getElementById(IDs[i]).checked);
+	}
+}
+
 </script>
 
 </html>
