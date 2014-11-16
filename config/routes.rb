@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/users/:id/edit2' => "users#edit2"
   post "/users/:id/edit2"    => "users#edit2"
 
+  get '/home/questionPage', as: "questions_no_save"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
