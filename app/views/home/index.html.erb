@@ -14,7 +14,9 @@
 <p class= "lead">After the Skillightenment process, we'll output a neat summary of your skills, which you can use to bolster your resume strength and empower your job search.</p>
 
 <div>
+<% if current_user.nil?%>
 <%= button_to "Questions!", {:controller => :users, :action => 'edit2', :id => current_user.id}, :class=>"btn btn-primary" %>
+<% end %>
 </div>
 
 
