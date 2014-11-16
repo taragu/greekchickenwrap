@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 
-	<head></head>
+	<head>
+	</head>
 
 
 	<body>
-	<div id="MainQuestionnairediv">
+
+	<div id="MainQuestionnairediv" class= "container">
 		<p>djaslkdjaslkdasjldks</p>
 
 		<div id="forkQuestiondiv">
 			<p>Which of the following jobs do you wish to have?</p>
-			<button onclick="revealNextPage('WarehousePage1')" class="btn btn-default">Proceed</button>
+
+			<button onclick="revealNextPage('')" class="btn btn-default">Proceed</button>
 		</div>
 
 		<div style="display:none" id="CNAPage1div">
@@ -46,7 +49,7 @@
 
 		</div>
 
-
+		</div>
 	</body>
 <script type="text/javascript">
 function revealNextPage(pageToReveal) {
@@ -55,8 +58,9 @@ function revealNextPage(pageToReveal) {
 		// document.getElementById("CNAPage1div").style.display = "table";
 	}
 	else {
+
 		if ($("#CNAPage1div").css('display') != 'none') {
-			
+
 		}
 	}
 }
