@@ -1,3 +1,5 @@
+
+
 <%= form_for @user do |f| %>  
   <div class="form-group">
 
@@ -6,9 +8,9 @@
 
     
     <div id="forkQuestiondiv">
-      <p>Which of the following jobs do you wish to have?</p>
+      <h2>What job are you interested in?</h2>
       <button type="button" onclick="revealNextPage('WarehousePage1')" class="btn btn-primary btn-lg btn-block">Warehouse Worker</button>
-      <button type="button" onclick="revealNextPage('CNAPage1')" class="btn btn-default btn-lg btn-block">Certified Nursing Assistant</button>
+      <button type="button" onclick="revealNextPage('CNAPage1')" class="btn btn-primary btn-lg btn-block">Certified Nursing Assistant</button>
       <button type="button" class="btn btn-primary btn-lg btn-block">Truck Driver</button>
       <button type="button" class="btn btn-primary btn-lg btn-block">Food Service Associate</button>
       <button type="button" class="btn btn-primary btn-lg btn-block">Retail Worker</button>
@@ -137,7 +139,7 @@
 	</label>
 	<label>
 	  <%= f.check_box :interacting_with_customers, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
-	  Interacting with customers
+	  Always interact with others with compassion
 	</label>
 	<label>
 	  <%= f.check_box :standing_for_extended_periods_of_time, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
