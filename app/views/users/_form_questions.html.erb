@@ -7,29 +7,51 @@
     
     <div id="forkQuestiondiv">
       <p>Which of the following jobs do you wish to have?</p>
-      <button onclick="revealNextPage('WarehousePage1')" class="btn btn-primary btn-lg btn-block">Warehouse Worker</button>
-      <button onclick="revealNextPage('CNAPage1')" class="btn btn-default btn-lg btn-block">Certified Nursing Assistant</button>
-      <button class="btn btn-primary btn-lg btn-block">Truck Driver</button>
-      <button class="btn btn-primary btn-lg btn-block">Food Service Associate</button>
-      <button class="btn btn-primary btn-lg btn-block">Retail Worker</button>
+      <button type="button" onclick="revealNextPage('WarehousePage1')" class="btn btn-primary btn-lg btn-block">Warehouse Worker</button>
+      <button type="button" onclick="revealNextPage('CNAPage1')" class="btn btn-default btn-lg btn-block">Certified Nursing Assistant</button>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Truck Driver</button>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Food Service Associate</button>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Retail Worker</button>
     </div>	
     
     <div style="display:none" id="CNAPage1div">
       <p>Do you have previous work experience with this job or similar?</p>
-      <button onclick="revealNextPage('CNAPage2')" class="btn btn-default">Yes</button>
-      <button onclick="revealNextPage('CNAPage3')" class="btn btn-default">No</button>
+      <button type="button" onclick="revealNextPage('CNAPage2')" class="btn btn-default">Yes</button>
+      <button type="button" onclick="revealNextPage('CNAPage3')" class="btn btn-default">No</button>
     </div>
 
 
 
     <div style="display:none" id="CNAPage2div">
       <p>In your previous work, have you had experience with any of the following?</p>
-      <button class="btn btn-default">Administering Medications</button>
-      <button class="btn btn-default">Observing Patients Over Time</button>
-      <button class="btn btn-default">Changing Dressing</button>
-      <button class="btn btn-default">Taking and Recording Vitals</button>
-      <button class="btn btn-default">No</button>
-      <button onclick="revealNextPage('CNAPage3')" class="btn btn-default">Proceed</button>
+      <div class="checkbox">
+	<label>
+	  <%= f.check_box :administering_medications, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Administering Medications
+	</label>
+
+	<label>
+	  <%= f.check_box :observing_patients_over_time, {}, 1, 0 %>
+	  Observing patients over time
+	</label>
+
+	<label>
+	  <%= f.check_box :changing_dressings, {}, 1, 0 %>
+	  Changing dressings
+	</label>
+
+	<label>
+	  <%= f.check_box :taking_and_recording_vitals, {}, 1, 0 %>
+	  Taking and recording vitals
+	</label>
+
+	<label>
+	  <%= f.check_box :bathing_patients_and_taking_care_of_basic_hygiene, {}, 1, 0 %>
+	  Bathing patients and taking care of basiz hygiene
+	</label>
+      </div>
+
+      <button type="button"  onclick="revealNextPage('CNAPage3')" class="btn btn-default">Proceed</button>
     </div>
 
 
@@ -37,114 +59,99 @@
     <!-- TODO WE WANT TO DO CHECK BOXES FOR DIV 3 4 6 7 -->
     <div style="display:none" id= "CNAPage3div">
       <p>Do you have any miscellaneous job or volunteer experience with any of the following?</p>
-      <button class="btn btn-default">No</button>
-      <button class="btn btn-default">No</button>
-      <button class="btn btn-default">No</button>
-      <button class="btn btn-default">No</button>
-      <button class="btn btn-default">No</button>
-      <button class="btn btn-default">No</button>
-      <button class="btn btn-default">Proceed</button>
+      <div class="checkbox">
+	<label>
+	  <%= f.check_box :running_errands_with_a_client, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Running errands with a client
+	</label>
+	
+	<label>
+	  <%= f.check_box :having_compassion, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Having compassion
+	</label>
+	<label>
+	  <%= f.check_box :following_directions_precisely, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Following directions precisely
+	</label>
+	<label>
+	  <%= f.check_box :managing_emergency_situations, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Managing emergency situations
+	</label>
+	<label>
+	  <%= f.check_box :communicating_effectively, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Communicating effectively
+	</label>
+	<label>
+	  <%= f.check_box :filing_series_of_paperwork, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Filing series of paperwork
+	</label>
+
+      </div>
+      <button type="button" class="btn btn-default">Proceed</button>
     </div>
-  
-    <P>Administering Medications </p>
-    <%= f.radio_button :administering_medications, "1"  %>
 
-    <%= f.radio_button :administering_medications, "0"  %>
 
-    <p>observing_patients_over_time</p>
-    <%= f.radio_button :observing_patients_over_time, "1"  %>
 
-    <%= f.radio_button :observing_patients_over_time, "0"  %>
+    <div style="display:none" id="WarehousePage1div">
+      <p>Do you have previous experience in Warehouse maintenence or something similar?</p>
+      <button type="button" onclick="revealNextPage('WarehousePage2')" class="btn btn-default">Yes</button>
+      <button type="button" onclick="revealNextPage('WarehousePage3')" class="btn btn-default">No</button>
+    </div>
 
-    <p>changing_dressings</p>
-    <%= f.radio_button :changing_dressings, "1"  %>
 
-    <%= f.radio_button :changing_dressings, "0"  %>
-    
-    <p>taking_and_recording_vitals</p>
-    <%= f.radio_button :taking_and_recording_vitals, "1"  %>
+    <div style="display:none" id="WarehousePage2div">
+      <p>In your previous work, have you had experience with any of the following?</p>
+      <div class="checkbox">
+	<label>
+	  <%= f.check_box :using_a_pallet_jack_penumatic_ladder_or_a_fork_lift, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Using a pallet jack, penumatic ladder, or a fork lift
+	</label>
+	<label>
+	  <%= f.check_box :properly_handling_hazardous_materials, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Properly handling hazardous materials
+	</label>
+	<label>
+	  <%= f.check_box :warehouse_safety_precautions, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Warehouse safety precautions
+	</label>
+      </div>
+      <button type="button" onclick="revealNextPage('WarehousePage3')" class="btn btn-default">Proceed</button>
+    </div>
 
-    <%= f.radio_button :taking_and_recording_vitals, "0"  %>
-    
-    <p> bathing_patients_and_taking_care_of_basic_hygiene</p>
-     <%= f.radio_button :bathing_patients_and_taking_care_of_basic_hygiene, "1"  %>
 
-    <%= f.radio_button :bathing_patients_and_taking_care_of_basic_hygiene, "0"  %>
 
-    <p>running_errands_with_a_client</p>
-    <%= f.radio_button :running_errands_with_a_client, "1"  %>
+    <div style="display:none" id="WarehousePage3div">
+      <p>In any previous work or volunteer experience have you had any experience with the following?</p>
+      <div class="checkbox">
+	<label>
+	  <%= f.check_box :organizing_merchandise, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Organizing merchandise
+	</label>
+	<label>
+	  <%= f.check_box :working_with_a_goods_retrieval_system, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Working with a goods retrieval system
+	</label>
+	<label>
+	  <%= f.check_box :interacting_with_customers, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Interacting with customers
+	</label>
+	<label>
+	  <%= f.check_box :standing_for_extended_periods_of_time, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Standing for extended periods of time
+	</label>
+	<label>
+	  <%= f.check_box :performing_physically_dexterous_or_demanding_tasks, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Performing physically dexterous or demanding tasks
+	</label>
+	<label>
+	  <%= f.check_box :basic_computer_proficiency, {:class => "myclass", :style => "mystyle"}, 1, 0 %>
+	  Basic computer proficiency
+	</label>
 
-    <%= f.radio_button :running_errands_with_a_client, "0"  %>
 
-    <p>having_compassion</p>
-    <%= f.radio_button :having_compassion, "1"  %>
-
-    <%= f.radio_button :having_compassion, "0"  %>
-
-    <p>following_directions_precisely</p>
-    <%= f.radio_button :following_directions_precisely, "1"  %>
-
-    <%= f.radio_button :following_directions_precisely, "0"  %>
-
-    <p>managing_emergency_situations</p>
-    <%= f.radio_button :managing_emergency_situations, "1"  %>
-
-    <%= f.radio_button :managing_emergency_situations, "0"  %>
-
-    <p>communicating_effectively</p>
-    <%= f.radio_button :communicating_effectively, "1"  %>
-
-    <%= f.radio_button :communicating_effectively, "0"  %>
-
-    <p>filing_series_of_paperwork</p>
-    <%= f.radio_button :filing_series_of_paperwork, "1"  %>
-
-    <%= f.radio_button :filing_series_of_paperwork, "0"  %>
-
-    <p>using_a_pallet_jack_penumatic_ladder_or_a_fork_lift</p>
-    <%= f.radio_button :using_a_pallet_jack_penumatic_ladder_or_a_fork_lift, "1"  %>
-
-    <%= f.radio_button :using_a_pallet_jack_penumatic_ladder_or_a_fork_lift, "0"  %>
-
-    <p>properly_handling_hazardous_materials</p>
-    <%= f.radio_button :properly_handling_hazardous_materials, "1"  %>
-
-    <%= f.radio_button :properly_handling_hazardous_materials, "0"  %>
-
-    <p>warehouse_safety_precautions</p>
-    <%= f.radio_button :warehouse_safety_precautions, "1"  %>
-
-    <%= f.radio_button :warehouse_safety_precautions, "0"  %>
-
-    <p>organizing_merchandise</p>
-    <%= f.radio_button :organizing_merchandise, "1"  %>
-
-    <%= f.radio_button :organizing_merchandise, "0"  %>
-
-    <p>working_with_a_goods_retrieval_system</p>
-    <%= f.radio_button :working_with_a_goods_retrieval_system, "1"  %>
-
-    <%= f.radio_button :working_with_a_goods_retrieval_system, "0"  %>
-
-    <p>interacting_with_customers</p>
-    <%= f.radio_button :interacting_with_customers, "1"  %>
-
-    <%= f.radio_button :interacting_with_customers, "0"  %>
-
-    <p>standing_for_extended_periods_of_time</p>
-    <%= f.radio_button :standing_for_extended_periods_of_time, "1"  %>
-
-    <%= f.radio_button :standing_for_extended_periods_of_time, "0"  %>
-
-    <p>performing_physically_dexterous_or_demanding_tasks</p>
-    <%= f.radio_button :performing_physically_dexterous_or_demanding_tasks, "1"  %>
-
-    <%= f.radio_button :performing_physically_dexterous_or_demanding_tasks, "0"  %>
-
-    <p>basic_computer_proficiency</p>
-    <%= f.radio_button :basic_computer_proficiency, "1"  %>
-
-    <%= f.radio_button :basic_computer_proficiency, "0"  %>
+      </div>
+      <button type="button" class="btn btn-default">Proceed</button>
+    </div>
 
 
   </div>  
@@ -155,4 +162,25 @@
 
 </div>
 <% end %> 
+
+
+
+<script type="text/javascript">
+
+function revealNextPage(pageToReveal) {
+	pages = ["forkQuestion", "CNAPage1", "CNAPage2", "CNAPage3", "WarehousePage1", "WarehousePage2", "WarehousePage3"];
+
+	for (i = 0; i < pages.length; i++) {
+		if (pages[i] != pageToReveal) {
+			console.log(pages[i] + " " + pageToReveal);
+			$("#" + pages[i] + "div").hide("slow");
+			// document.getElementById(pageToReveal + "div").style.display = "none";
+		}
+	}
+	$("#" + pageToReveal + "div").show("slow");
+	// document.getElementById("CNAPage1div").style.display = "table";
+
+
+}
+</script>
 
