@@ -3,52 +3,90 @@
 <ul>
 <% @user.attributes.each_pair do |name, value| %>
   <% if (value==1) %>
-  <% if (name!="sign_in_count") %>
-  <li>
+  <% if (name!="sign_in_count" || name!="email" || name!="encrypted_password" || name!="reset_password_token" || name!="current_sign_in_ip" || name!="last_sign_in_ip" || name!="name") %>
+  
     <% if (name == "administering_medications") %>
+    <li>
     <%= "Experience in administering necessary medicines" %>
+    </li>
     <% elsif (name == "observing_patients_over_time") %>
+    <li>
     <%= "Responsible for observing patients for changes in conditions over time" %>
+    </li>
     <% elsif (name == "changing_dressings") %>
+    <li>
     <%= "Knowledge of changing medical dressing" %>
+    </li>
     <% elsif (name == "taking_and_recording_vitals") %>
+    <li>
     <%= "Responsible for taking and recording vitals" %>
+    </li>
     <% elsif (name == "bathing_patients_and_taking_care_of_basic_hygiene") %>
+    <li>
     <%= "Bathing patients and taking care of basic hygienic needs" %>
+    </li>
     <% elsif (name == "running_errands_with_a_client") %>
+    <li>
     <%= "Fulfills any errands as needed by clients" %>
+    </li>
     <% elsif (name == "having_compassion") %>
+    <li>
     <%= "Having compassion" %>
+    </li>
     <% elsif (name == "following_directions_precisely") %>
+    <li>
     <%= "Objective thinker with the ability follow directions precisely" %>
+    </li>
     <% elsif (name == "managing_emergency_situations") %>
+    <li>
     <%= "Able to deal with difficult and emergency situations" %>
+    </li>
     <% elsif (name == "communicating_effectively") %>
+    <li>
     <%= "Effectively communicates with clients and other workers" %>
+    </li>
     <% elsif (name == "filing_series_of_paperwork") %>
+    <li>
     <%= "Experience handling various paperworks" %>
+    </li>
     <% elsif (name == "using_a_pallet_jack_penumatic_ladder_or_a_fork_lift") %>
+    <li>
     <%= "Experience with warehouse implements and tools" %>
+    </li>
     <% elsif (name == "properly_handling_hazardous_materials") %>
+    <li>
     <%= "Experience in the handling of hazardous materials" %>
+    </li>
     <% elsif (name == "warehouse_safety_precautions") %>
+    <li>
     <%= "Practiced standard Warehouse Safety Precautions" %>
+    </li>
     <% elsif (name == "organizing_merchandise") %>
+    <li>
     <%= "Experience with organizing merchandise" %>
+    </li>
     <% elsif (name == "working_with_a_goods_retrieval_system") %>
+    <li>
     <%= "Familiarity with typical goods retrieval systems" %>
+    </li>
     <% elsif (name == "interacting_with_customers") %>
+    <li>
     <%= "Experience with interacting with customers" %>
+    </li>
     <% elsif (name == "standing_for_extended_periods_of_time") %>
+    <li>
     <%= "Worked in positions requiring long periods of standing upright" %>
+    </li>
     <% elsif (name == "performing_physically_dexterous_or_demanding_tasks") %>
+    <li>
     <%= "Exceptional physical condition capable of performing more demanding tasks" %>
+    </li>
     <% elsif (name == "basic_computer_proficiency") %>
+    <li>
     <%= "Proficiency with basic computer skills" %>
-
+    </li>
     
     <% end %> 
-  </li>
   <% end %>
   <% end %>
 <% end %>
