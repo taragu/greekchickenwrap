@@ -43,3 +43,7 @@ gem 'devise'
 
 # bootstrap
 gem 'bootstrap-sass', '~> 3.3.1'
+
+group :production do
+  gem 'pg'
+end
